@@ -9,11 +9,14 @@ RUN apt-get -y update && apt-get install -y
 # Install dependencies
 RUN apt-get -y install clang clang-format libncurses5-dev libncursesw5-dev git make cmake
 
-# Clone the repo
-RUN git clone https://github.com/blairharper/system-monitor.git /usr/src/system-monitor
+# copy current folder to docker env
+COPY . /usr/src/system-monitor
 
 # Specify the working directory
 WORKDIR /usr/src/system-monitor
 
 # Use make to compile our build
 RUN make build
+
+# Run output
+CMD ["./build/monitor"]
