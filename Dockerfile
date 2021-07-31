@@ -14,5 +14,5 @@ RUN git clone https://github.com/blairharper/system-monitor.git /usr/src/system-
 # Specify the working directory
 WORKDIR /usr/src/system-monitor
 
-# Use Clang to compile the Test.cpp source file
+# Use make to build
 RUN make build
