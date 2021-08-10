@@ -39,3 +39,7 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 5. Implement the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
 
 6. Submit!
+
+## Docker Instructions
+This project contains a Dockerfile to build a C++ docker development environment, install dependencies, and build and run our code.
+1. Run `docker build --pull --rm -f "Dockerfile" -t cppndsystemmonitor:latest "." && docker run cppndsystemmonitor`
